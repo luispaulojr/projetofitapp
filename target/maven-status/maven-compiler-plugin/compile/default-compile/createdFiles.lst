@@ -1,0 +1,9 @@
+projetofitapp\entity\Arquivo.class
+META-INF\spring-configuration-metadata.json
+projetofitapp\storage\FileSystemStorageService.class
+projetofitapp\storage\StorageFileNotFoundException.class
+projetofitapp\storage\StorageException.class
+projetofitapp\Application.class
+projetofitapp\storage\StorageService.class
+projetofitapp\controller\FileUploadController.class
+projetofitapp\storage\StorageProperties.class

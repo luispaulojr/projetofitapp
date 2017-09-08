@@ -1,0 +1,59 @@
+body{
+	margin-bottom: 100px;
+ 	min-height: 100vh;
+	background-image: url('https://unsplash.it/g/1500/800?random');
+}
+
+.login-form{
+	margin-top: 50vh;
+	padding: 20px 30px;
+ 	background-color: rgba(0, 0, 0, .9);
+	color: #FFF;
+	transform: translateY(-50%);
+}
+
+.login-form h1{
+	margin: 0 0 5px;
+}
+
+.login-form h2{
+	margin: 0 0 30px;
+	font-size: 1em;
+}
+
+.logotipo img{
+	height: 30px;
+}
+
+.logotipo{
+	padding: 10px;
+	margin-right: 20px;
+}
+
+.perfil{
+	padding: 10px;
+	width: 300px;
+}
+
+.perfil li:first-child{
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 2px;
+ }
+
+@media (max-width: 767px) {
+	.perfil{
+		color: #FFF;
+	}
+
+	.perfil a{
+		color: #9d9d9d;
+		display: block;
+		padding: 5px 0;
+	}
+
+	.perfil a:hover{
+		text-decoration: none;
+		color: #FFF;
+	}
+}
