@@ -31,7 +31,7 @@ public class FileUploadController {
         this.storageService = storageService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/upload")
     public String listUploadedFiles(Model model) throws IOException {
 
         model.addAttribute("files", storageService
@@ -47,7 +47,7 @@ public class FileUploadController {
         return "uploadForm";
     }
 
-    @GetMapping("/files/{filename:.+}")
+    @GetMapping("/upload/files/{filename:.+}")
     @ResponseBody
     public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
 
@@ -58,7 +58,7 @@ public class FileUploadController {
                 .body(file);
     }
 
-    @PostMapping("/")
+    @PostMapping("/upload")
     public String handleFileUpload(@RequestParam("foto") MultipartFile foto, @RequestParam("txtCodigo") Integer codigo, @RequestParam("txtNome") String nome,
                                    RedirectAttributes redirectAttributes) {
 
@@ -70,8 +70,8 @@ public class FileUploadController {
         storageService.store(foto);
         redirectAttributes.addFlashAttribute("message",
                 "Upload feito com sucesso!");
-        
-        return "redirect:/";
+
+        return "redirect:upload";
     }
 
     @SuppressWarnings("rawtypes")
